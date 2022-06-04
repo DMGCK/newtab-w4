@@ -1,0 +1,30 @@
+Weather: The temp is displayed in Fahrenheit/Celsius with a click
+ toggling between
+
+
+
+
+
+
+
+
+
+
+
+
+
+COMPLETED
+Image: The API must be used to get a random image on reload.
+Quote: Quote always displayed and Author reveals on hover
+The image must be large with at least one an element positioned over top, without tiling or warping
+A clock shows the accurate time in the middle of the screen and updates appropriately
+Todo: Todo's are rendered on load
+When adding a Todo the page does not reload
+Todo's can be marked complete (PUT)
+NEEDS CHECK
+Todo: Todo's list includes an up to date count of all tasks compared to uncompleted tasks (refresh not required)
+Todo's can be added to a list (POST)
+Deleting a todo requires confirmation
+Todo's can be removed (DELETE)
+Completed Todo's have a style indication or checkbox that will persist on reload (hint: checked attribute)
+All data for Weather, Quotes, Todos, and Images are retrieved through the BCW Sandbox API

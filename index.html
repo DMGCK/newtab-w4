@@ -10,34 +10,98 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>newtab-w4</title>
+  <title>Nice</title>
 </head>
 
-<body>
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="">
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">newtab-w4</span>
-      </a>
-    </nav>
+    
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+      <div class="row d-flex">
+        <div class="col-2">
+          <div class="m-1">
+            <div onclick="app.weatherController.changeUnit()" class="bg-light text-center selectable opacity-50 p-1">
+
+              <h6><span id="temp"></span>°</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 h-100">
+          <div class="col-12"></div>
+          <div class="col-12">
+            <div class="rounded q align-middle">
+              <div id="clock" class="clock">
+                what up im a big clock
+              </div>
+            </div>
+          </div>
+          <div class="col-12 q">
+            <div class="quote rounded">
+              <div id="quote" class="quote-inside">
+                Quote Stuff
+              </div>
+
+              <div id="quote-author" class="quote-author">
+                Quote Stuff 2
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="m-1 mt-4">
+            <div class="bg-light p-1">
+              <h4>Todos <span id="todo-count"></span></h4>
+
+              <div id="todo-list">
+                <div class="p-1">
+                  <input type="checkbox" name="${this.id}" id="${this.id}">
+                  Text of todo
+                </div>
+
+              </div>
+              <span></span>
+
+              <form onsubmit="app.todoController.addTodo()">
+                <div class="mb-3">
+                  <label for="" class="form-label"></label>
+                  <input type="text" class="form-control" name="newTask" id="newTask" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">New Task</small>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
-    </div>
+  <footer class="bg-black text-light">
+    <!-- <div class="text-center no-select">
+      <p><small>Made with 💖 by Cameron</small></p>
+    </div> -->
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js" ></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
